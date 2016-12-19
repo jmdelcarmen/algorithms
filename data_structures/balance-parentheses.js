@@ -1,6 +1,6 @@
 'use strict';
 
-let str = '{}[][][][][][][][]';
+let str = '{}[][][][][][[[]]][][][]';
 
 function checkBalance(parenStr) {
   let open = parenStr.match(/[\{\(\[]/g);
@@ -10,15 +10,14 @@ function checkBalance(parenStr) {
     return false;
   }
 
-  function checkCloser (nextOpenCharCode, nextCloseCharCode, i) {
-    if (unclosed[unclosed.length - 1] === String.fromCharCode(nextOpenCharCode) && parenStr[i] === String.fromCharCode(nextCloseCharCode)) {
+  function checkCloser (char1, char2, i) {
+    if (unclosed[unclosed.length - 1] === String.fromCharCode(char1) && parenStr[i] === String.fromCharCode(char2)) {
       return true;
     }
     return false;
   }
 
   let unclosed = [];
-
   for (let i = 0; i < parenStr.length; i++) {
     if (parenStr[i].match(/[\{\(\[]/g)) {
       unclosed.push(parenStr[i]);

@@ -24,7 +24,7 @@
   * 1/2 of the block is the data
   * 1/2 is the memory location of the next data block
   * 4bytes for integer var and 4bytes for the pointer variable
-  * to access elememt in linked-list you should start with the head node
+  * to access element in linked-list you should start with the head node
   * last node has no pointer variable //null
   * similar to playing treasure hunt
 
