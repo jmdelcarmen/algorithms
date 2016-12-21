@@ -1,9 +1,6 @@
 'use strict';
+//works!
 
-var arr = [];
-for (var arr_i = 0; arr_i < 5; arr_i++) {
-  arr.push(readLine().split(' '));
-}
 var sums = [];
 
 for (var i = 0; i < 4; i++) {
